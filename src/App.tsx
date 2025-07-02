@@ -8,9 +8,13 @@ import Home from "./pages/home/Home";
 import DeletarCategoria from "./pages/categorias/deletarcategoria/DeletarCategoria";
 import FormCategoria from "./pages/categorias/formcategoria/FormCategoria";
 import ListarCategorias from "./pages/categorias/listarcategoria/ListarCategorias";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
+    <>
+    <ToastContainer />
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -28,6 +32,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </>
   );
 }
 

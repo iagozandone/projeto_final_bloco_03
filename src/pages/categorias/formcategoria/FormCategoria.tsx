@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import type { Categoria } from "../../../models/Categoria";
 import { atualizar, cadastrar, listar } from "../../../services/Service";
 import { ClipLoader } from "react-spinners";
+import { ToastAlerta } from "../../../util/ToastAlerta";
 
 
 function FormCategoria() {
@@ -18,7 +19,7 @@ function FormCategoria() {
     try {
       await listar(`/categorias/${id}`, setCategoria)
     } catch (error: any) {
-      alert('Categoria não encontrada!')
+      ToastAlerta('Categoria não encontrada!', 'info')
       console.error(error)
       retornar();
     }
@@ -45,10 +46,10 @@ function FormCategoria() {
       try {
         await atualizar(`/categorias`, categoria, setCategoria)
 
-        alert('Categoria atualizado com sucesso')
+        ToastAlerta('Categoria atualizado com sucesso','sucesso')
 
       } catch (error: any) {
-        alert('Erro ao atualizar o Categoria')
+        ToastAlerta('Erro ao atualizar o Categoria', 'erro')
         console.error(error)
       }
 
@@ -56,10 +57,10 @@ function FormCategoria() {
       try {
         await cadastrar(`/categorias`, categoria, setCategoria)
 
-        alert('Categoria cadastrada com sucesso')
+        ToastAlerta('Categoria cadastrada com sucesso', 'sucesso')
 
       } catch (error: any) {
-        alert('Erro ao cadastrar a Categoria')
+        ToastAlerta('Erro ao cadastrar a Categoria', 'erro')
         console.error(error)
       }
     }
