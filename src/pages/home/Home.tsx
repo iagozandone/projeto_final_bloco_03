@@ -5,7 +5,7 @@ import homeIllustration from '../../assets/imagemfarmacia.png';
 
 function Home() {
     return (
-        <div className="bg-white-200 flex justify-center items-center h-full">
+        <div className="bg-white flex justify-center items-center h-full">
             <div className='container grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-16 px-4'>
                 
                 <div className="flex flex-col gap-4 items-center justify-center text-center text-slate-900">
