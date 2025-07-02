@@ -5,8 +5,6 @@ import homeIllustration from '../../assets/imagemfarmacia.png';
 
 function Home() {
     return (
-        // A classe 'h-full' é a chave aqui!
-        // Ela faz esta div azul claro ocupar 100% da altura que o <main> lhe der.
         <div className="bg-white-200 flex justify-center items-center h-full">
             <div className='container grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-16 px-4'>
                 

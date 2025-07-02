@@ -57,8 +57,6 @@ function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-4 py-4">
-                    {/* O link de Produtos pode ser adicionado no futuro */}
-                    {/* <Link to="/produtos" className="hover:underline">Produtos</Link> */}
                     <Link to="/categorias" className="hover:underline">Categorias</Link>
                     <Link to="/cadastrarCategoria" className="hover:underline">Cadastrar Categoria</Link>
                     
